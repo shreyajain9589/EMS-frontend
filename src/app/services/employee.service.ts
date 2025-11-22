@@ -10,7 +10,7 @@ export class EmployeeService {
   http = inject(HttpClient);
   auth = inject(AuthService);
 
-  API_URL = "http://localhost:5000/api/employees";
+  API_URL = "https://ems-backend-1-a9qa.onrender.com/api/employees";
 
   private getHeaders() {
     const token = this.auth.getToken();

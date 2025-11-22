@@ -31,7 +31,7 @@ export class Login {
 
     console.log("Sending:", this.loginObj);
 
-    this.http.post("http://localhost:5000/api/auth/login", this.loginObj)
+    this.http.post("https://ems-backend-1-a9qa.onrender.com/api/auth/login", this.loginObj)
       .subscribe({
         next: (res: any) => {
 

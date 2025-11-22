@@ -10,7 +10,7 @@ export class LeaveService {
   http = inject(HttpClient);
   auth = inject(AuthService);
 
-  API_URL = "http://localhost:5000/api/leaves";
+ API_URL = "https://ems-backend-1-a9qa.onrender.com/api/leaves";
 
   constructor() {}
 

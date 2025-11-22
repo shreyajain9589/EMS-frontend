@@ -11,7 +11,7 @@ export class DepartmentService {
   http = inject(HttpClient);
   auth = inject(AuthService);
 
-  API_URL = "http://localhost:5000/api/departments";
+  API_URL = "https://ems-backend-1-a9qa.onrender.com/api/departments";
 
   private getHeaders() {
   return {
