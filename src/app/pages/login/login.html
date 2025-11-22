@@ -1,0 +1,43 @@
+<div class="login-container">
+
+  <!-- LEFT SIDE -->
+  <div class="left-side">
+    <h1 class="heading">
+      Login <br />
+      <span>To Your Workspace</span>
+    </h1>
+
+    <img src="http://i.postimg.cc/YC13sX2Z/Astronaut-cuate.png" alt="astronaut" class="astronaut" />
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-side">
+    <div class="login-card">
+
+      <h2 class="login-title">Login</h2>
+
+      <label for="user">Email</label>
+      <input
+        type="email"
+        autocomplete="off"
+        [(ngModel)]="loginObj.email"
+        (ngModelChange)="loginObj.email = $event.trim()"
+        placeholder="Email"
+      />
+
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        autocomplete="new-password"
+        [(ngModel)]="loginObj.password"
+        (ngModelChange)="loginObj.password = $event.trim()"
+        placeholder="Password"
+      />
+
+      <button class="login-btn" (click)="onLogin()">LOGIN</button>
+
+    </div>
+  </div>
+
+</div>

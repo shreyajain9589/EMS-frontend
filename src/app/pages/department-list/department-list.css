@@ -1,0 +1,63 @@
+.page-container {
+  padding: 20px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.add-btn {
+  padding: 10px 16px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.custom-table th {
+  background: #fafafa;
+}
+
+.edit-btn {
+  padding: 6px 10px;
+  margin-right: 6px;
+  background: #ffc107;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 6px 10px;
+  background: #dc3545;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<div class="page-container">
+     <div class="header-row">
+         <h2 class="page-title">Departments</h2> 
+         <button class="add-btn" routerLink="/departments/add">+ Add Department</button> 
+    </div> <div class="table-container"> 
+        <table class="custom-table">
+         <thead>
+             <tr>
+                 <th>#</th> 
+                 <th>Department Name</th> 
+                 <th>Description</th> 
+                 <th>Actions</th> 
+                </tr> 
+                </thead> 
+                <tbody> 
+                    <tr *ngFor="let dept of departments; let i = index"> 
+                        <td>{{ i + 1 }}</td> 
+                        <td>{{ dept.name }}</td>
+                        <td>{{ dept.description }}</td>
+                        <td>
+                        <button class="edit-btn" 
+                        [routerLink]="['/departments/edit', dept._id]"> Edit </button>
+                              
+                        <button class="delete-btn" 
+                        (click)="deleteDepartment(dept._id)"> Delete </button>
+                    </td>          
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+</div>

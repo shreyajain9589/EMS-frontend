@@ -1,0 +1,74 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 32px;
+  color: #0d6efd;
+}
+
+.stat-card p {
+  margin: 8px 0 0;
+  color: #555;
+}
+
+.table-section {
+  margin-top: 35px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.custom-table th {
+  background: #fafafa;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+}
+
+.pending {
+  background: #ffc107;
+}
+
+.approved {
+  background: #28a745;
+}
+
+.rejected {
+  background: #dc3545;
+}

@@ -1,0 +1,25 @@
+<div class="page-container">
+
+  <h2 class="page-title">
+    {{ isEdit ? 'Edit Department' : 'Add Department' }}
+  </h2>
+
+  <div class="form-card">
+
+    <label>Department Name</label>
+    <input type="text" [(ngModel)]="department.name" placeholder="Department Name" />
+
+    <label>Description</label>
+    <textarea
+      [(ngModel)]="department.description"
+      rows="4"
+      placeholder="Description"
+    ></textarea>
+
+    <button class="save-btn" (click)="saveDepartment()">
+      {{ isEdit ? 'Update' : 'Save' }}
+    </button>
+
+  </div>
+
+</div>

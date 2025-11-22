@@ -1,0 +1,23 @@
+<div class="page-container">
+
+  <h2 class="page-title">Apply for Leave</h2>
+
+  <div class="form-card">
+
+    <label>From Date</label>
+    <input type="date" [(ngModel)]="leaveObj.from" />
+
+    <label>To Date</label>
+    <input type="date" [(ngModel)]="leaveObj.to" />
+
+    <label>Reason</label>
+    <textarea
+      [(ngModel)]="leaveObj.reason"
+      placeholder="Describe your reason..."
+      rows="4">
+    </textarea>
+
+    <button class="submit-btn" (click)="apply()">Submit Leave Request</button>
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="page-container">
+
+  <h2 class="page-title">
+    {{ isEdit ? 'Edit Employee' : 'Add Employee' }}
+  </h2>
+
+  <div class="form-card">
+
+    <label>Name</label>
+    <input type="text" [(ngModel)]="employee.name" name="name" placeholder="Employee Name" />
+
+    <label>Email</label>
+    <input type="email" [(ngModel)]="employee.email" name="email" placeholder="Employee Email" autocomplete="off" />
+
+
+    <!-- Only show password while adding employee -->
+    <div *ngIf="!isEdit">
+      <label>Password</label>
+      <input type="password" [(ngModel)]="employee.password" name="password" placeholder="Password" autocomplete="new-password" />
+
+    </div>
+
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="employee.phone" name="phone" placeholder="Phone Number" />
+
+    <label>Department</label>
+    <select [(ngModel)]="employee.department" name="department">
+      <option value="">Select Department</option>
+      <option *ngFor="let dept of departments" [value]="dept._id">
+        {{ dept.name }}
+      </option>
+    </select>
+
+    <label>Designation</label>
+    <input type="text" [(ngModel)]="employee.designation" name="designation" placeholder="Designation" />
+
+    <label>Joining Date</label>
+    <input type="date" [(ngModel)]="employee.joiningDate" name="joiningDate" />
+
+    <button class="save-btn" (click)="saveEmployee()">
+      {{ isEdit ? 'Update' : 'Save' }}
+    </button>
+
+  </div>
+
+</div>

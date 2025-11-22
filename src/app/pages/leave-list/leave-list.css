@@ -1,0 +1,69 @@
+.page-container {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.custom-table th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+}
+
+.badge-pending {
+  background: #f0ad4e;
+}
+
+.badge-approved {
+  background: #5cb85c;
+}
+
+.badge-rejected {
+  background: #d9534f;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 6px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+.approve-btn {
+  background: #5cb85c;
+}
+
+.reject-btn {
+  background: #d9534f;
+}

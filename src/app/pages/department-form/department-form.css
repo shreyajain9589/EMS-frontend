@@ -1,0 +1,50 @@
+.page-container {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-card {
+  background: white;
+  padding: 20px;
+  width: 450px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.save-btn {
+  margin-top: 20px;
+  padding: 12px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.save-btn:hover {
+  background: #0b5ed7;
+}

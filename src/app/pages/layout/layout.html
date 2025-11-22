@@ -1,0 +1,46 @@
+<div class="layout-wrapper">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2 class="logo">EMS</h2>
+
+    <ul class="menu">
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+
+      <!-- Visible only for admin / manager -->
+      <li *ngIf="isAdminOrManager()">
+        <a routerLink="/employees" routerLinkActive="active">Employees</a>
+      </li>
+
+      <li *ngIf="isAdminOrManager()">
+        <a routerLink="/departments" routerLinkActive="active">Departments</a>
+      </li>
+
+      <!-- Leaves List only for admin / manager -->
+      <li *ngIf="isAdminOrManager()">
+        <a routerLink="/leaves" routerLinkActive="active">Leaves</a>
+      </li>
+
+      <!-- Apply leave only for employees -->
+      <li *ngIf="isEmployee()">
+        <a routerLink="/leaves/apply" routerLinkActive="active">Apply Leave</a>
+      </li>
+    </ul>
+
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-area">
+    <div class="topbar">
+      <div class="welcome">Welcome, {{ user?.name }}</div>
+    </div>
+
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

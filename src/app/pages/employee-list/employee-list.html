@@ -1,0 +1,43 @@
+<div class="page-container">
+
+  <div class="header-row">
+    <h2 class="page-title">Employees</h2>
+    <button class="add-btn" routerLink="/employees/add">+ Add Employee</button>
+  </div>
+
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let emp of employees; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.department?.name }}</td>
+          <td>{{ emp.phone }}</td>
+
+          <td>
+            <button class="edit-btn" [routerLink]="['/employees/edit', emp._id]">
+              Edit
+            </button>
+
+            <button class="delete-btn" (click)="deleteEmployee(emp._id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

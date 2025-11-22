@@ -1,0 +1,53 @@
+<div class="page-container">
+
+  <h2 class="page-title">Leave Requests</h2>
+
+  <!-- LEAVE TABLE -->
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Employee</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Reason</th>
+          <th>Status</th>
+          <th *ngIf="user?.role === 'admin'">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let leave of leaves; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ leave.employee?.name }}</td>
+          <td>{{ leave.from | date }}</td>
+          <td>{{ leave.to | date }}</td>
+          <td>{{ leave.reason }}</td>
+
+          <td>
+            <span class="badge"
+              [ngClass]="{
+                'badge-pending': leave.status === 'pending',
+                'badge-approved': leave.status === 'approved',
+                'badge-rejected': leave.status === 'rejected'
+              }">
+              {{ leave.status | uppercase }}
+            </span>
+          </td>
+
+          <!-- Admin Only Actions -->
+          <td *ngIf="user.role === 'admin' || user.role === 'manager'">
+  <button class="approve-btn" (click)="updateStatus(leave._id, 'approved')">
+    Approve
+  </button>
+  <button class="reject-btn" (click)="updateStatus(leave._id, 'rejected')">
+    Reject
+  </button>
+</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
